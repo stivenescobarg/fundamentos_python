@@ -477,3 +477,150 @@ Unarios: actúan sobre un solo valor (ej: -5)
 
 Binarios: actúan sobre dos valores (ej: 5 + 3)
 
+## 🧪 LAB – Variables en Python
+
+### 📌 Descripción
+
+En este laboratorio se trabajó con el uso de **variables** en Python, asignando valores y realizando operaciones básicas con ellas.
+
+Se crearon variables para representar la cantidad de manzanas de tres personas:
+
+| Persona | Variable | Valor |
+|---------|----------|-------|
+| John    | `john`   | `3`   |
+| Mary    | `mary`   | `5`   |
+| Adam    | `adam`   | `6`   |
+
+---
+
+### 🎯 Objetivos
+
+- Declarar y asignar valores a variables
+- Imprimir el contenido de variables en consola
+- Realizar operaciones aritméticas con variables
+- Crear una nueva variable a partir de operaciones entre otras
+- Combinar texto y variables en la salida
+
+---
+
+### 💡 Lógica utilizada
+
+1. Se crean variables y se les asignan valores enteros
+2. Se imprimen las variables usando `print()` con múltiples argumentos
+3. Se crea una nueva variable `total_apples` sumando las anteriores
+4. Se imprime el resultado numérico
+5. Se combina texto con variables en la salida final
+
+---
+
+### 🧾 Código utilizado
+
+```python
+# Asignación de valores
+john = 3
+mary = 5
+adam = 6
+
+# Impresión de valores individuales
+print(john, mary, adam)
+
+# Cálculo del total
+total_apples = john + mary + adam
+
+# Impresión del total
+print(total_apples)
+
+# Impresión con formato
+print("Número total de manzanas:", total_apples)
+📤 Resultado en consola
+text
+3 5 6
+14
+Número total de manzanas: 14
+
+## LAB Variables: Convertidor simple
+
+### Descripción
+
+En este laboratorio se implementó un programa para convertir distancias entre millas y kilómetros, utilizando variables y operaciones matemáticas básicas.
+
+Se tomó como base que:
+- 1 milla ≈ 1.61 kilómetros
+
+### Lógica utilizada
+
+1. Se definen dos variables:
+   - `miles`
+   - `kilometers`
+
+2. Se realizan las conversiones:
+   - De millas a kilómetros: multiplicando por 1.61
+   - De kilómetros a millas: dividiendo entre 1.61
+
+3. Se utiliza la función `round()` para limitar los resultados a 2 decimales.
+
+4. Se imprimen los resultados combinando texto y variables.
+
+### Ejemplo de salida
+
+
+7.38 millas son 11.88 kilómetros
+12.25 kilómetros son 7.61 millas
+
+## LAB Operadores y expresiones
+
+### Descripción
+
+En este laboratorio se desarrolló un programa que evalúa una expresión algebraica utilizando operadores matemáticos en Python.
+
+La expresión trabajada fue:
+
+3x³ - 2x² + 3x - 1
+
+### Lógica utilizada
+
+1. Se define una variable `x` y se convierte a tipo `float`.
+2. Se traduce la expresión matemática a Python usando:
+   - `**` para potencias
+   - `*` para multiplicación explícita
+3. Se calcula el resultado y se almacena en la variable `y`.
+4. Se imprime el resultado con `print()`.
+
+### Ejemplo de salida
+
+Para diferentes valores de `x`:
+x = 0  → y = -1.0
+x = 1  → y = 3.0
+x = -1 → y = -9.0
+
+## LAB - Ejercicios de Algoritmos
+
+### Descripción
+
+En este laboratorio se desarrollaron múltiples algoritmos enfocados en resolver problemas básicos dentro del contexto de un videojuego, aplicando variables, operadores y expresiones en Python.
+
+Cada ejercicio consiste en solicitar datos al usuario mediante `input()`, procesarlos mediante operaciones matemáticas y mostrar el resultado con `print()`.
+
+### Lógica utilizada
+
+En todos los ejercicios se sigue una estructura común:
+
+1. **Entrada de datos:** Se solicitan valores al usuario.
+2. **Procesamiento:** Se realizan operaciones matemáticas como suma, división, multiplicación o conversión.
+3. **Salida:** Se muestra el resultado en consola.
+
+### Conceptos aplicados
+
+- Variables (`int`, `float`)
+- Operadores matemáticos (`+`, `-`, `*`, `/`, `//`, `%`)
+- Conversión de tipos (`int()`, `float()`)
+- Entrada de datos (`input()`)
+- Cálculo de porcentajes y promedios
+
+### Ejemplos de resultados
+
+- Puntaje total: suma de niveles.
+- Tiempo total: conversión a segundos.
+- Vida restante: cálculo porcentual.
+- Velocidad promedio: distancia / tiempo.
+- Tiempo en horas y minutos: uso de división entera y módulo.
