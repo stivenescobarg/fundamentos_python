@@ -307,3 +307,173 @@ print('"Estoy"""aprendiendo"""""Python"""')
 📤 Resultado en consola
 text
 "Estoy"""aprendiendo"""""Python"""
+
+
+## 📌 Sección 3 – Operadores en Python
+
+En esta sección se trabajó con operadores aritméticos para manipular datos y realizar cálculos, comprendiendo cómo Python evalúa las expresiones.
+
+---
+
+## 🧠 ¿Qué es un operador?
+
+Un operador es un símbolo que permite realizar operaciones con valores.
+
+**Ejemplo:**
+
+```python
+print(2 + 2)
+Salida:
+
+text
+4
+🔢 Operadores básicos
+Operador	Función
++	Suma
+-	Resta
+*	Multiplicación
+/	División
+//	División entera
+%	Módulo (residuo)
+**	Potencia
+⚠️ Reglas importantes
+✔ División (/)
+python
+print(6 / 3)
+Salida:
+
+text
+2.0
+Nota: La división siempre devuelve un número flotante (float).
+
+✔ División entera (//)
+python
+print(6 // 4)
+Salida:
+
+text
+1
+Nota: Siempre redondea hacia abajo al entero más cercano.
+
+✔ Módulo (%)
+python
+print(14 % 4)
+Salida:
+
+text
+2
+Nota: Devuelve el residuo de la división.
+
+❓ Ejercicios importantes
+🔹 1. Prioridad de operadores
+python
+print(2 + 3 * 5)
+Resultado:
+
+text
+17
+Explicación:
+
+Primero se multiplica: 3 * 5 = 15
+
+Luego se suma: 2 + 15 = 17
+
+🔹 2. Enlazado (izquierda a derecha)
+python
+print(9 % 6 % 2)
+Resultado:
+
+text
+1
+Explicación:
+
+9 % 6 = 3
+
+3 % 2 = 1
+
+🔹 3. Exponenciación (derecha a izquierda)
+python
+print(2 ** 2 ** 3)
+Resultado:
+
+text
+256
+Explicación:
+
+La exponenciación se evalúa de derecha a izquierda:
+
+2 ** (2 ** 3) → 2 ** 8 → 256
+
+🔹 4. Caso especial: potencia con signo negativo
+python
+print(-3 ** 2)
+print(-2 ** 3)
+print(-(3 ** 2))
+Resultado:
+
+text
+-9
+-8
+-9
+Explicación:
+
+La potencia se ejecuta antes que el signo negativo:
+
+-3 ** 2 → -(3²) → -9
+
+-2 ** 3 → -(2³) → -8
+
+-(3 ** 2) → -(9) → -9
+
+Importante: Para elevar un número negativo a una potencia, usa paréntesis: (-3) ** 2 → 9
+
+🔹 5. Operadores con misma prioridad
+python
+print(2 * 3 % 5)
+Resultado:
+
+text
+1
+Explicación:
+
+Se evalúa de izquierda a derecha:
+
+2 * 3 = 6
+
+6 % 5 = 1
+
+🔹 6. Expresión compleja
+python
+print((5 * ((25 % 13) + 100) / (2 * 13)) // 2)
+Resultado:
+
+text
+10.0
+Paso a paso:
+
+Paso	Operación	Resultado
+1	25 % 13	12
+2	12 + 100	112
+3	5 * 112	560
+4	2 * 13	26
+5	560 / 26	≈ 21.53
+6	21.53 // 2	10.0
+📊 Tabla de prioridad de operadores
+Prioridad	Operadores	Asociatividad
+1 (Más alta)	**	Derecha a izquierda
+2	-x (negación unaria)	Derecha a izquierda
+3	*, /, //, %	Izquierda a derecha
+4 (Más baja)	+, -	Izquierda a derecha
+⚠️ Observaciones importantes
+✅ Python respeta la prioridad matemática estándar
+
+✅ Los paréntesis cambian el orden de ejecución
+
+❌ La división entre cero genera error (ZeroDivisionError)
+
+📌 Los operadores pueden ser:
+
+Unarios: actúan sobre un solo valor (ej: -5)
+
+Binarios: actúan sobre dos valores (ej: 5 + 3)
+
