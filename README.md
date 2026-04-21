@@ -113,7 +113,7 @@ print("Python")
 
 Programming***Essentials***in...Python
 
-    
+
 🧪 LAB – Dando formato a la salida
 📌 Descripción del problema
 En este laboratorio se trabajó con la función print() para comprender cómo dar formato a la salida en consola, utilizando cadenas, caracteres de escape y operaciones con o.
@@ -182,3 +182,128 @@ text
   *   *     *   *
   *   *     *   *
   *****     *****
+
+##  📌 Sección 2 – Literales de Python
+
+En esta sección se estudiaron los diferentes tipos de literales en Python, es decir, los valores que se escriben directamente en el código.
+
+---
+
+## 🧠 ¿Qué es un literal?
+
+Un literal es un valor fijo que se escribe directamente en el programa.
+
+**Ejemplos:**
+
+```python
+123
+"Hola"
+True
+🔢 Tipos de literales
+✔ Enteros (int)
+Son números sin parte decimal.
+
+python
+print(123)
+print(-50)
+print(11_111_111)
+Salida:
+
+text
+123
+-50
+11111111
+✔ Números en otros sistemas
+Octal
+python
+print(0o123)
+Salida:
+
+text
+83
+Hexadecimal
+python
+print(0x123)
+Salida:
+
+text
+291
+✔ Números flotantes (float)
+Son números con decimales.
+
+python
+print(2.5)
+print(.4)
+print(4.)
+✔ Notación científica
+Permite representar números grandes o pequeños.
+
+python
+print(3E8)
+print(6.62607E-34)
+✔ Cadenas (string)
+Son textos entre comillas.
+
+python
+print("Hola")
+print('Python')
+Uso de comillas dentro de cadenas
+python
+print("Me gusta \"Monty Python\"")
+print('Me gusta "Monty Python"')
+✔ Valores booleanos (bool)
+Representan verdadero o falso.
+
+python
+print(True)
+print(False)
+❓ Pregunta importante (RETO)
+Código:
+
+python
+print(True > False)
+print(True < False)
+Resultado:
+
+text
+True
+False
+💡 Explicación
+En Python:
+
+True equivale a 1
+
+False equivale a 0
+
+Entonces:
+
+True > False → 1 > 0 → True
+
+True < False → 1 < 0 → False
+
+⚠️ Diferencia importante
+python
+print("2")  # cadena (string)
+print(2)    # número (int)
+Aunque se ven iguales en la consola, son tipos diferentes en memoria.
+
+🧪 LAB – Literales de Python: Cadenas
+📌 Descripción del problema
+En este laboratorio se debía imprimir una cadena específica que contiene múltiples comillas dobles, utilizando correctamente los literales de tipo cadena en Python.
+
+🎯 Objetivo
+Obtener la siguiente salida en consola:
+
+text
+"Estoy"""aprendiendo"""""Python"""
+💡 Lógica utilizada
+Para resolver el ejercicio se utilizaron comillas simples (' ') para delimitar la cadena principal. Esto permitió incluir comillas dobles (" ") dentro del texto sin necesidad de usar caracteres de escape.
+
+Python interpreta todo el contenido entre comillas simples como texto literal, por lo que las comillas triples (""") se imprimen sin problema.
+
+🧾 Código utilizado
+python
+print('"Estoy"""aprendiendo"""""Python"""')
+📤 Resultado en consola
+text
+"Estoy"""aprendiendo"""""Python"""
