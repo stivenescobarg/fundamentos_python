@@ -275,67 +275,265 @@ print(14 % 4)  # → 2
 
 ### ❓ Ejercicios importantes
 
-**1. Prioridad de operadores**
-```python
-print(2 + 3 * 5)   # → 17
-```
-> Primero `3 * 5 = 15`, luego `2 + 15 = 17`
+---
 
-**2. Enlazado de izquierda a derecha**
-```python
-print(9 % 6 % 2)   # → 1
-```
-> `9 % 6 = 3` → `3 % 2 = 1`
+## 🧮 Ejercicios de Operadores Matemáticos
 
-**3. Exponenciación (derecha a izquierda)**
-```python
-print(2 ** 2 ** 3)   # → 256
-```
-> `2 ** (2 ** 3)` → `2 ** 8` → `256`
+> En esta sección se documentan 15 ejercicios que aplican las reglas de **prioridad de operadores** en Python. Para cada uno se muestra la expresión, el desglose paso a paso y el resultado final.
 
-**4. Potencia con signo negativo**
-```python
-print(-3 ** 2)      # → -9
-print(-2 ** 3)      # → -8
-print(-(3 ** 2))    # → -9
-```
-> ⚠️ La potencia se ejecuta **antes** que el signo negativo.  
-> Para elevar un número negativo: usa paréntesis → `(-3) ** 2` → `9`
+---
 
-**5. Misma prioridad**
-```python
-print(2 * 3 % 5)   # → 1
-```
-> `2 * 3 = 6` → `6 % 5 = 1`
+### 📐 Reglas aplicadas
 
-**6. Expresión compleja**
+| Prioridad | Operadores           | Asociatividad       |
+|:---------:|----------------------|---------------------|
+| 1 (mayor) | `**`                 | Derecha a izquierda |
+| 2         | `-x` (negación)      | Derecha a izquierda |
+| 3         | `*`, `/`, `//`, `%`  | Izquierda a derecha |
+| 4 (menor) | `+`, `-`             | Izquierda a derecha |
+| —         | `( )`                | Se evalúan primero  |
+
+---
+
+### Ejercicio 1
+
 ```python
-print((5 * ((25 % 13) + 100) / (2 * 13)) // 2)   # → 10.0
+5 + 3 * 2
+```
+
+| Paso | Operación  | Resultado |
+|:----:|:----------:|:---------:|
+| 1    | `3 * 2`    | `6`       |
+| 2    | `5 + 6`    | `11`      |
+
+> ✅ Resultado: **`11`**
+
+---
+
+### Ejercicio 2
+
+```python
+8 / 2 + 4 * 3
+```
+
+| Paso | Operación  | Resultado |
+|:----:|:----------:|:---------:|
+| 1    | `8 / 2`    | `4.0`     |
+| 2    | `4 * 3`    | `12`      |
+| 3    | `4.0 + 12` | `16.0`    |
+
+> ✅ Resultado: **`16.0`**
+
+---
+
+### Ejercicio 3
+
+```python
+(7 + 3) * 2 - 5
+```
+
+| Paso | Operación   | Resultado |
+|:----:|:-----------:|:---------:|
+| 1    | `7 + 3`     | `10`      |
+| 2    | `10 * 2`    | `20`      |
+| 3    | `20 - 5`    | `15`      |
+
+> ✅ Resultado: **`15`**
+
+---
+
+### Ejercicio 4
+
+```python
+10 - 4 + 2 * 3
+```
+
+| Paso | Operación  | Resultado |
+|:----:|:----------:|:---------:|
+| 1    | `2 * 3`    | `6`       |
+| 2    | `10 - 4`   | `6`       |
+| 3    | `6 + 6`    | `12`      |
+
+> ✅ Resultado: **`12`**
+
+---
+
+### Ejercicio 5
+
+```python
+(10 / 2) * (3 + 2) - 4
 ```
 
 | Paso | Operación    | Resultado |
 |:----:|:------------:|:---------:|
-| 1    | `25 % 13`    | `12`      |
-| 2    | `12 + 100`   | `112`     |
-| 3    | `5 * 112`    | `560`     |
-| 4    | `2 * 13`     | `26`      |
-| 5    | `560 / 26`   | `≈ 21.53` |
-| 6    | `21.53 // 2` | `10.0`    |
+| 1    | `10 / 2`     | `5.0`     |
+| 2    | `3 + 2`      | `5`       |
+| 3    | `5.0 * 5`    | `25.0`    |
+| 4    | `25.0 - 4`   | `21.0`    |
+
+> ✅ Resultado: **`21.0`**
 
 ---
 
-### 📊 Tabla de prioridad de operadores
+### Ejercicio 6
 
-| Prioridad     | Operadores          | Asociatividad      |
-|:-------------:|---------------------|--------------------|
-| 1 (más alta)  | `**`                | Derecha a izquierda |
-| 2             | `-x` (negación)     | Derecha a izquierda |
-| 3             | `*`, `/`, `//`, `%` | Izquierda a derecha |
-| 4 (más baja)  | `+`, `-`            | Izquierda a derecha |
+```python
+2 + 3 * (4 - 1)
+```
 
-> ✅ Python respeta la prioridad matemática estándar.  
-> ✅ Los paréntesis cambian el orden de ejecución.  
-> ❌ La división entre cero genera `ZeroDivisionError`.
+| Paso | Operación  | Resultado |
+|:----:|:----------:|:---------:|
+| 1    | `4 - 1`    | `3`       |
+| 2    | `3 * 3`    | `9`       |
+| 3    | `2 + 9`    | `11`      |
+
+> ✅ Resultado: **`11`**
+
+---
+
+### Ejercicio 7
+
+```python
+5 * 2 ** 3
+```
+
+| Paso | Operación  | Resultado |
+|:----:|:----------:|:---------:|
+| 1    | `2 ** 3`   | `8`       |
+| 2    | `5 * 8`    | `40`      |
+
+> ✅ Resultado: **`40`**
+
+---
+
+### Ejercicio 8
+
+```python
+6 + 4 / 2 ** 2
+```
+
+| Paso | Operación  | Resultado |
+|:----:|:----------:|:---------:|
+| 1    | `2 ** 2`   | `4`       |
+| 2    | `4 / 4`    | `1.0`     |
+| 3    | `6 + 1.0`  | `7.0`     |
+
+> ✅ Resultado: **`7.0`**
+
+---
+
+### Ejercicio 9
+
+```python
+10 % 3 + 2 * 5
+```
+
+| Paso | Operación  | Resultado |
+|:----:|:----------:|:---------:|
+| 1    | `10 % 3`   | `1`       |
+| 2    | `2 * 5`    | `10`      |
+| 3    | `1 + 10`   | `11`      |
+
+> ✅ Resultado: **`11`**
+
+---
+
+### Ejercicio 10
+
+```python
+(8 + 2) * 3 ** 2
+```
+
+| Paso | Operación  | Resultado |
+|:----:|:----------:|:---------:|
+| 1    | `8 + 2`    | `10`      |
+| 2    | `3 ** 2`   | `9`       |
+| 3    | `10 * 9`   | `90`      |
+
+> ✅ Resultado: **`90`**
+
+---
+
+### Ejercicio 11
+
+```python
+7 + 2 * (3 + 5) / 4
+```
+
+| Paso | Operación  | Resultado |
+|:----:|:----------:|:---------:|
+| 1    | `3 + 5`    | `8`       |
+| 2    | `2 * 8`    | `16`      |
+| 3    | `16 / 4`   | `4.0`     |
+| 4    | `7 + 4.0`  | `11.0`    |
+
+> ✅ Resultado: **`11.0`**
+
+---
+
+### Ejercicio 12
+
+```python
+2 ** 3 * 4 / 2
+```
+
+| Paso | Operación  | Resultado |
+|:----:|:----------:|:---------:|
+| 1    | `2 ** 3`   | `8`       |
+| 2    | `8 * 4`    | `32`      |
+| 3    | `32 / 2`   | `16.0`    |
+
+> ✅ Resultado: **`16.0`**
+
+---
+
+### Ejercicio 13
+
+```python
+9 - 6 + 3 ** 2
+```
+
+| Paso | Operación  | Resultado |
+|:----:|:----------:|:---------:|
+| 1    | `3 ** 2`   | `9`       |
+| 2    | `9 - 6`    | `3`       |
+| 3    | `3 + 9`    | `12`      |
+
+> ✅ Resultado: **`12`**
+
+---
+
+### Ejercicio 14
+
+```python
+(7 - 2) * 5 + 3 ** 2
+```
+
+| Paso | Operación  | Resultado |
+|:----:|:----------:|:---------:|
+| 1    | `7 - 2`    | `5`       |
+| 2    | `3 ** 2`   | `9`       |
+| 3    | `5 * 5`    | `25`      |
+| 4    | `25 + 9`   | `34`      |
+
+> ✅ Resultado: **`34`**
+
+---
+
+### Ejercicio 15
+
+```python
+4 * 2 ** 3 / 8 + 1
+```
+
+| Paso | Operación  | Resultado |
+|:----:|:----------:|:---------:|
+| 1    | `2 ** 3`   | `8`       |
+| 2    | `4 * 8`    | `32`      |
+| 3    | `32 / 8`   | `4.0`     |
+| 4    | `4.0 + 1`  | `5.0`     |
+
+> ✅ Resultado: **`5.0`**
 
 ---
 
@@ -466,7 +664,7 @@ print('"Estoy"""aprendiendo"""""Python"""')
 
 ---
 
-### LAB 5 – Variables en Python
+### LAB 5 – Variables en Python -- Sección 4
 
 **Descripción:** Se crearon variables para representar la cantidad de manzanas de tres personas.
 
