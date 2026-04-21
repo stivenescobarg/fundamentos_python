@@ -82,6 +82,27 @@ Salida:
 
 Hola Mundo
 
+## LAB Trabajando con la función print()
+
+### Descripción
+
+En este laboratorio se utilizó la función `print()` para mostrar mensajes en pantalla, comprendiendo su sintaxis básica y algunos errores comunes.
+
+### Lógica utilizada
+
+1. Se utilizó `print()` para mostrar el texto "¡Hola, Mundo!".
+2. Se imprimió un nombre usando otra llamada a `print()`.
+3. Se realizaron pruebas eliminando elementos clave del código para observar errores.
+
+### Errores observados
+
+- **Sin comillas:**
+  Python interpreta el texto como una variable no definida → `NameError`.
+
+- **Sin paréntesis:**
+  En Python 3 esto genera un `SyntaxError`, ya que `print` es una función y requiere paréntesis.
+
+### Ejemplo de salida
 
 🧪 LAB – La función print() y sus argumentos
 📌 Descripción del problema
